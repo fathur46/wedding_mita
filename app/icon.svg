@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1254" height="1254" viewBox="0 0 1254 1254">
+  <defs>
+    <linearGradient id="redMain" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff161f"/>
+      <stop offset="52%" stop-color="#f10a12"/>
+      <stop offset="100%" stop-color="#b90008"/>
+    </linearGradient>
+    <linearGradient id="redTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff1b24"/>
+      <stop offset="100%" stop-color="#d90810"/>
+    </linearGradient>
+    <linearGradient id="redMid" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e90710"/>
+      <stop offset="100%" stop-color="#ff111a"/>
+    </linearGradient>
+    <linearGradient id="shadow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#260000" stop-opacity=".88"/>
+      <stop offset="100%" stop-color="#050000" stop-opacity=".18"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Original black canvas -->
+  <rect width="1254" height="1254" fill="#000"/>
+
+  <!-- Main F silhouette -->
+  <path d="M881 206
+           H416
+           V1055
+           L576 1016
+           L649 1011
+           V817
+           L609 676
+           H838
+           V503
+           H674
+           L636 374
+           H881
+           Z"
+        fill="url(#redMain)"/>
+
+  <!-- Dark inner fold / depth -->
+  <path d="M580 206
+           H636
+           L674 374
+           H636
+           L609 503
+           L674 503
+           L609 676
+           L649 817
+           V1011
+           L580 1028
+           Z"
+        fill="url(#shadow)"/>
+
+  <!-- Upper bar highlight -->
+  <path d="M636 206 H881 V373 H636 L580 206 Z"
+        fill="url(#redTop)" opacity=".82"/>
+
+  <!-- Middle bar highlight -->
+  <path d="M580 503 H838 V676 H609 L580 503 Z"
+        fill="url(#redMid)" opacity=".9"/>
+
+  <!-- Subtle left-side depth -->
+  <path d="M416 206 H580 V1028 L416 1055 Z"
+        fill="#ff1018" opacity=".22"/>
+</svg>

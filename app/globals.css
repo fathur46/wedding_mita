@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background-color: #000;
+  color: #fff;
+  overscroll-behavior-y: none;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.tracking-tightest {
+  letter-spacing: -0.04em;
+}
+
+/* Netflix-style edge fade for horizontal rows */
+.edge-fade {
+  mask-image: linear-gradient(to right, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
+}
+
+/*
+ * Safe-area insets as CSS variables (default 0 when unsupported/no notch) so
+ * call sites can ADD them to an existing padding utility via calc(), e.g.
+ * pt-[calc(0.75rem+var(--inset-top))]. A standalone "padding-top: env(...)"
+ * utility class would instead REPLACE whatever py- or pt- utility is already
+ * on the element (same CSS property, later in source order wins the
+ * cascade), collapsing the intended padding to 0 on ordinary devices.
+ */
+:root {
+  --inset-top: env(safe-area-inset-top, 0px);
+  --inset-bottom: env(safe-area-inset-bottom, 0px);
+}
