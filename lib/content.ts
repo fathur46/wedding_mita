@@ -81,7 +81,7 @@ export const weddingConfig = {
   },
   reception: {
     label: "RECEPTION",
-    date: "Saturday, 26 October 2026",
+    date: "Monday, 26 October 2026",
     time: "09:00 WIB",
     startISO: "2026-12-20T09:00:00+07:00",
     endISO: "2026-12-20T14:00:00+07:00",
